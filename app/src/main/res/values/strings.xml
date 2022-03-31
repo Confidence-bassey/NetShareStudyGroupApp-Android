@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">NetShare Study App</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="Continue">Continue</string>
+    <string name="verification_mail">An account Verification mail has been sent to your entered email address click on the link to confirm your email address</string>
+    <string name="createAcc">Create account to explore our app features</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="sign_in">Sign in below with your registered email address and password</string>
+    <string name="Welcome">Welcome To NetShare Study App</string>
+    <string name="Sign_Up_Page">Welcome To NetShare User Account Creation Page</string>
+    <string name="provide_details">Welcome To NetShare User Account Creation Page, We are glad to have you on our app, provide your details below</string>
+    <string name="glad">Good to have you here, kindly create a user account using the sign up button below or sign in if you already have a NetShare account to explore our unique app features, we hope you enjoy the app.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="have_an_account">Already have an account?</string>
+    <string name="sign_in_btn">Sign In</string>
+    <string name="sign_up_btn">Sign Up</string>
+    <string name="email_hint">email</string>
+    <string name="password_hint">password</string>
+
+</resources>

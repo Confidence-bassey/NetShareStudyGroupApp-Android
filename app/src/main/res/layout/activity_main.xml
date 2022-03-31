@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/welcomeNet"
+        android:text="@string/Welcome"
+        android:layout_margin="20dp"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        android:textColor="@color/black"
+        android:gravity="center"
+
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/welcomeHome"
+        android:text="@string/glad"
+        android:layout_below="@id/welcomeNet"
+        android:layout_margin="20dp"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        android:textColor="@color/black"
+        android:gravity="center"
+
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/createAccbtn"
+        android:text="@string/sign_up_btn"
+        android:textStyle="bold"
+        android:background="@color/Hot_Pink"
+        android:layout_below="@id/welcomeHome"
+        android:layout_alignRight="@id/welcomeHome"
+        android:layout_margin="30dp"
+        android:textColor="@color/white">
+
+    </Button>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/haveAcc"
+        android:text="@string/have_an_account"
+        android:layout_margin="30dp"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        android:layout_below="@id/createAccbtn"
+        android:textColor="@color/black"
+        android:gravity="center"
+
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/signIn"
+        android:text="@string/sign_in_btn"
+        android:textStyle="bold"
+        android:background="@color/Hot_Pink"
+        android:layout_below="@id/haveAcc"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="30dp"
+        android:textColorHighlight="@color/Cerise"
+        android:textColor="@color/white">
+
+    </Button>
+
+</RelativeLayout>
