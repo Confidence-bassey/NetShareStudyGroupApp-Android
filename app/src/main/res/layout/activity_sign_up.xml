@@ -15,60 +15,45 @@
         android:layout_margin="30dp"
         android:textSize="10sp"
         android:textStyle="italic"
-        android:textColor="@color/white"
         android:gravity="center"
 
         />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/FirstName"
+        android:id="@+id/txt_signup_firstName"
         android:hint="firstname"
         android:textColor="@color/black"
         android:textColorHint="@color/Glaucous"
         android:layout_below="@id/Sign_Up"
         android:layout_margin="10dp"
-        android:padding="10dp"
-        android:background="@color/white">
+        android:padding="10dp">
 
     </EditText>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/LastName"
+        android:id="@+id/txt_signup_lastName"
         android:hint="lastname"
         android:textColor="@color/black"
         android:textColorHint="@color/Glaucous"
-        android:layout_below="@id/FirstName"
+        android:layout_below="@id/txt_signup_firstName"
         android:layout_margin="10dp"
         android:padding="10dp"
         android:background="@color/white">
 
     </EditText>
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/username"
-        android:hint="username"
-        android:textColor="@color/black"
-        android:textColorHint="@color/Glaucous"
-        android:layout_below="@id/LastName"
-        android:layout_margin="10dp"
-        android:padding="10dp"
-        android:background="@color/white">
-
-    </EditText>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/Email"
+        android:id="@+id/txt_signup_email"
         android:hint="email"
         android:textColor="@color/black"
         android:textColorHint="@color/Glaucous"
-        android:layout_below="@id/username"
+        android:layout_below="@id/txt_signup_lastName"
         android:layout_margin="10dp"
         android:padding="10dp"
         android:drawableLeft="@drawable/ic_email"
@@ -78,43 +63,16 @@
 
     </EditText>
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/password"
-        android:hint="password"
-        android:textColor="@color/black"
-        android:textColorHint="@color/Glaucous"
-        android:layout_below="@id/Email"
-        android:layout_margin="10dp"
-        android:padding="10dp"
-        android:inputType="textPassword"
-        android:background="@color/white">
 
-    </EditText>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/confirmpassword"
-        android:hint="confirm"
-        android:textColor="@color/black"
-        android:textColorHint="@color/Glaucous"
-        android:layout_below="@id/password"
-        android:layout_margin="10dp"
-        android:padding="10dp"
-        android:background="@color/white">
-
-    </EditText>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/phoneNumber"
+        android:id="@+id/txt_signup_phone"
         android:hint="phonenumber"
         android:textColor="@color/black"
         android:textColorHint="@color/Glaucous"
-        android:layout_below="@id/confirmpassword"
+        android:layout_below="@id/txt_signup_email"
         android:layout_margin="10dp"
         android:padding="10dp"
         android:drawableLeft="@drawable/ic_phone"
@@ -125,14 +83,18 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/getNotification"
-        android:text="Save"
+        android:id="@+id/btnSignUp"
+        android:text="Create Account"
         android:background="@color/Dark_Pink"
+        android:textAllCaps="false"
         android:textStyle="bold"
-        android:layout_below="@id/phoneNumber"
-        android:layout_alignRight="@id/phoneNumber"
+        android:layout_below="@id/txt_signup_phone"
         android:layout_margin="10dp"
         android:textColorHighlight="@color/Cerise"
+        android:layout_centerHorizontal="true"
+        android:paddingRight="25dp"
+        android:paddingLeft="25dp"
+
         android:textColor="@color/white">
 
     </Button>
