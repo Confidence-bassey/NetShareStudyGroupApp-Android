@@ -5,7 +5,7 @@ import java.util.Date;
 
 public class UserAccountModel {
 
-    ArrayList<UserAccount> Users;
+    ArrayList<UserAccount> User;
 
     public static class UserAccount{
     private int id;

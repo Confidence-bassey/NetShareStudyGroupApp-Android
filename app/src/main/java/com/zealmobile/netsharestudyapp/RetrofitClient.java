@@ -7,7 +7,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RetrofitClient {
 
     private static Retrofit retrofit;
-    private static String BASE_URL = "http://localhost:8080/";
+    private static String BASE_URL = "https://netshare-study-group-api.azurewebsites.net/";
 
     public static Retrofit getRetrofitInstance(){
         if(retrofit==null){
