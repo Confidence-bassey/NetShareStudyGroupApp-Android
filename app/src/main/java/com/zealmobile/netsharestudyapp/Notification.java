@@ -11,6 +11,7 @@ import com.zealmobile.netsharestudyapp.Models.UserAccountModel;
 import com.zealmobile.netsharestudyapp.dao.UserAccountInterface;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -33,17 +34,17 @@ public class Notification extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                UserAccountInterface usersInterface = getRetrofitInstance().create(UserAccountInterface.class);
-                Call<UserAccountModel> callUsers = usersInterface.getUsers();
+                Call<List<UserAccountModel>> callUsers = usersInterface.getUsers();
 
-                callUsers.enqueue(new Callback<UserAccountModel>() {
+                callUsers.enqueue(new Callback<List<UserAccountModel>>() {
                     @Override
-                    public void onResponse(Call<UserAccountModel> call, Response<UserAccountModel> response) {
+                    public void onResponse(Call<List<UserAccountModel>> call, Response<List<UserAccountModel>> response) {
                         Log.i(TAG, "onResponse : called");
                         Log.e(TAG,"onResponse: code: "+response.code());
                     }
 
                     @Override
-                    public void onFailure(Call<UserAccountModel> call, Throwable t) {
+                    public void onFailure(Call<List<UserAccountModel>> call, Throwable t) {
                         Log.i(TAG, "onFailure : called");
                     }
                 });
