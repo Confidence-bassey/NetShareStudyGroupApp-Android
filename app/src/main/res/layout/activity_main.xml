@@ -45,8 +45,8 @@
             android:text="@string/glad"
             android:textColor="@color/black"
             android:fontFamily="cursive"
-            android:textSize="12sp"
-            android:textStyle="italic" />
+            android:textSize="14sp"
+            android:textStyle="normal" />
 
     </LinearLayout>
 
