@@ -3,10 +3,14 @@ package com.zealmobile.netsharestudyapp;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.zealmobile.netsharestudyapp.Models.UserAccountModel;
@@ -51,6 +55,17 @@ public class AppHomeActivity extends AppCompatActivity {
             public void onFailure(Call<List<UserAccountModel>> call, Throwable t) {
                 Log.d("App_Home", String.format("Get user accounts api call failed with error: %s",t.getMessage()), t);
                 userAccountsApiCall.cancel();
+            }
+        });
+    }
+
+    public void showUserDashBoard(View view){
+        Button myIview = (Button) findViewById(R.id.viewUserdboard);
+        myIview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AppHomeActivity.this, User_Dashboard.class);
+                startActivity(intent);
             }
         });
     }
