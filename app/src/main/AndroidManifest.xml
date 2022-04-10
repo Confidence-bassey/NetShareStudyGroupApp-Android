@@ -11,7 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NetShareStudyAppNoActnBar">
-        <activity android:name=".ActivitiesNavDrawer"></activity>
+        <activity android:name=".ActivitiesNavDrawer"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            >
+
+        </activity>
         <activity android:name=".User_Dashboard" />
         <activity android:name=".AppHomeActivity" />
         <activity android:name=".Notification" />
