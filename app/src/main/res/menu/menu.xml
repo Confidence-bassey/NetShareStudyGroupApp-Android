@@ -1,4 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.zealmobile.netsharestudyapp.MainActivity"
+    tools:ShowIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/createSession"
+            android:icon="@drawable/ic_book"
+            android:title="Reading Session"/>
+
+        <item
+            android:id="@+id/TutorialSession"
+            android:icon="@drawable/ic_group"
+            android:title="Group"/>
+
+        <item
+            android:id="@+id/ClassLectures"
+            android:icon="@drawable/ic_baseline_class_24"
+            android:title="Note"/>
+
+
+
+        <!-- app:showAsAction="never"
+        android:id="@+id/action_settings"
+         android:orderInCategory="100"
+         android:title="@string/action_settings">
+         -->
+        />
+    </group>
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/NoteShare"
+                android:icon="@drawable/ic_share"
+                android:title="Share Note"/>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/Note"
+        android:icon="@drawable/ic_add_note"
+        android:title="Logout"/>
 
 </menu>
