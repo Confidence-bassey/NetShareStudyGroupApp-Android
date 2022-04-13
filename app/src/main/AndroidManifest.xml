@@ -10,11 +10,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.NetShareStudyAppNoActnBar1">
-        <activity android:name=".ActivitiesNavDrawer">
-            android:theme="@style/Theme.NetShareStudyAppNoActnBar">
+        android:theme="@style/Theme.NetShareStudyAppNoActionBar">
+        <activity android:name=".ActivitiesNavDrawer"/>
+        <activity android:name=".User_Dashboard">
+            android:theme="@style/Theme.NetShareStudyAppNoActionBar.NoActionBar1"
         </activity>
-        <activity android:name=".User_Dashboard" />
         <activity android:name=".AppHomeActivity" />
         <activity android:name=".Notification" />
         <activity android:name=".SignIn" />

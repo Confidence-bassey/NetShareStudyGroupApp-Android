@@ -64,7 +64,7 @@ public class AppHomeActivity extends AppCompatActivity {
         myIview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(AppHomeActivity.this, ActivitiesNavDrawer.class);
+                Intent intent = new Intent(AppHomeActivity.this, User_Dashboard.class);
                 startActivity(intent);
             }
         });
