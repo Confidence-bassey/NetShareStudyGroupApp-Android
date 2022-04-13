@@ -6,7 +6,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -53,7 +55,33 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
 
 
         Button signUpButton = (Button)findViewById(R.id.btnSignUp);
-        signUpButton.setOnClickListener(this);
+        signUpButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(TextUtils.isEmpty(txtFirstName.getText().toString())){
+                    txtFirstName.setError("*required");
+                    txtFirstName.requestFocus();
+                    return;
+                }
+                if(TextUtils.isEmpty(txtLastName.getText().toString())){
+                    txtLastName.setError("*required");
+                    txtLastName.requestFocus();
+                    return;
+                }
+                if(TextUtils.isEmpty(txtEmail.getText().toString())){
+                    txtEmail.setError("*required");
+                    txtEmail.requestFocus();
+                    return;
+                }
+                if(TextUtils.isEmpty(txtPhoneNumber.getText().toString())){
+                    txtPhoneNumber.setError("*required");
+                    txtPhoneNumber.requestFocus();
+                    return;
+                }
+            }
+        });
+
+
 
     }
 
