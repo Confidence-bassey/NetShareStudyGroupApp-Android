@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".User_Dashboard">
 
     <LinearLayout
@@ -16,7 +17,10 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:id="@+id/toolbar"
-            android:background="@color/material_dynamic_primary20"
+<<<<<<< HEAD
+=======
+            android:background="@color/purple_500"
+>>>>>>> fa2c1863d059858f056db96fbb6c53cbec6d27c2
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:popupTheme="@style/Theme.AppCompat.Light"
             android:elevation="4dp">
@@ -26,7 +30,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_hamburg"
-                android:onClick="showNavigationDrawer"
                 />
 
         </androidx.appcompat.widget.Toolbar>
@@ -42,7 +45,8 @@
         android:layout_marginBottom="-238dp"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:text="Hello World!" />
+        android:text="Hello World!"
+        android:textColor="@color/white"/>
 
 
 </LinearLayout>
