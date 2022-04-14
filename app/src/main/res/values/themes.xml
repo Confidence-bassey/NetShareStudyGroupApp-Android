@@ -38,7 +38,7 @@
         <item name="windowNoTitle">false</item>
     </style>
 
-    <style name="Theme.NetShareStudyAppNoActnBar.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.NetShareStudyAppNoActionBar.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-    <style name="Theme.NetShareStudyAppNoActnBar.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="Theme.NetShareStudyAppNoActionBar.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
