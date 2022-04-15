@@ -3,7 +3,10 @@ package com.zealmobile.netsharestudyapp;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 public class ActivitiesNavDrawer extends AppCompatActivity {
 
@@ -11,12 +14,25 @@ public class ActivitiesNavDrawer extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_activities_nav_drawer);
-
-<<<<<<< HEAD
         Toolbar toolbar =(Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-=======
 
->>>>>>> fa2c1863d059858f056db96fbb6c53cbec6d27c2
+        Button testbtn = (Button)findViewById(R.id.testing);
+        testbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ActivitiesNavDrawer.this, LogOut.class);
+                startActivity(intent);
+            }
+        });
+
+        Button notesbtn = (Button)findViewById(R.id.GoToNotes);
+        notesbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent1 = new Intent(ActivitiesNavDrawer.this, Note.class);
+                startActivity(intent1);
+            }
+        });
     }
 }

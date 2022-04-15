@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import androidx.appcompat.widget.Toolbar;
@@ -25,10 +26,10 @@ public class User_Dashboard extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user__dashboard);
-
-        //Toolbar toolbar =(Toolbar)findViewById(R.id.toolbar);
-        //setSupportActionBar(toolbar);
-
+        Log.i("INFO","calling toolbar");
+        Toolbar toolbar =(Toolbar)findViewById(R.id.toolbar1);
+        setSupportActionBar(toolbar);
+        Log.i("INFO","toolbar called");
 
        /* ImageView myIview = (ImageView)findViewById(R.id.hamburgIcon);
         myIview.setOnClickListener(new View.OnClickListener() {
