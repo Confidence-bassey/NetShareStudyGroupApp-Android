@@ -25,5 +25,14 @@ public class ActivitiesNavDrawer extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button notesbtn = (Button)findViewById(R.id.GoToNotes);
+        notesbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent1 = new Intent(ActivitiesNavDrawer.this, Note.class);
+                startActivity(intent1);
+            }
+        });
     }
 }
