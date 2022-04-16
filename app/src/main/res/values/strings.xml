@@ -3,6 +3,8 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
     <string name="Continue">Continue</string>
+    <string name="open_drawer">Open navigation drawer</string>
+    <string name="Close_drawer">Close navigation drawer</string>
     <string name="verification_mail">An account Verification mail has been sent to your entered email address click on the link to confirm your email address</string>
     <string name="createAcc">Create account to explore our app features</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
