@@ -16,7 +16,7 @@
             android:title="Group"/>
 
         <item
-            android:id="@+id/ClassLectures"
+            android:id="@+id/Notes"
             android:icon="@drawable/ic_baseline_class_24"
             android:title="Note"/>
 
@@ -39,7 +39,7 @@
     </item>
 
     <item
-        android:id="@+id/Note"
+        android:id="@+id/Logout"
         android:icon="@drawable/ic_add_note"
         android:title="Logout"/>
 
