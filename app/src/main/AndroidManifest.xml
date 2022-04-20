@@ -11,11 +11,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NetShareStudyAppNoActionBar">
-        <activity android:name=".Group"></activity>
-        <activity android:name=".ReadingSession" />
-        <activity android:name=".AddNewNote" />
-        <activity android:name=".Note" />
-        <activity android:name=".LogOut" />
         <activity
             android:name=".ActivitiesNavDrawer"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
