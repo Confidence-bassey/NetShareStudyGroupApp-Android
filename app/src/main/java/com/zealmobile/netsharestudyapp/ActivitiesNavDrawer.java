@@ -36,20 +36,19 @@ public class ActivitiesNavDrawer extends AppCompatActivity
 
         drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
-        // navigationView.setNavigationItemSelectedListener(this);
+         navigationView.setNavigationItemSelectedListener(this);
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar,
                 R.string.open_drawer, R.string.Close_drawer);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-     /*   if (savedInstanceState == null) {
-            Intent intent = new Intent(ActivitiesNavDrawer.this, ReadingSession.class);
-            startActivity(intent);
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new com.zealmobile.netsharestudyapp.ReadingSession()).commit();
             navigationView.setCheckedItem(R.id.createSession);
-        }*/
+        }
 
-        Button testbtn = (Button)findViewById(R.id.testing);
+     /*   Button testbtn = (Button)findViewById(R.id.testing);
         testbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -65,7 +64,7 @@ public class ActivitiesNavDrawer extends AppCompatActivity
                 Intent intent1 = new Intent(ActivitiesNavDrawer.this, Note.class);
                 startActivity(intent1);
             }
-        });
+        });     */
     }
 
 
@@ -82,18 +81,15 @@ public class ActivitiesNavDrawer extends AppCompatActivity
         switch (item.getItemId()) {
             case R.id.createSession:
                 Log.i("INFO","ReadingSession called");
-                Intent intent = new Intent(ActivitiesNavDrawer.this, ReadingSession.class);
-                startActivity(intent);
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new com.zealmobile.netsharestudyapp.ReadingSession()).commit();
                 break;
 
             case R.id.TutorialSession:
-                Intent intent1 = new Intent(ActivitiesNavDrawer.this, Group.class);
-                startActivity(intent1);
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new com.zealmobile.netsharestudyapp.Group()).commit();
                 break;
 
             case R.id.Notes:
-                Intent intent2 = new Intent(ActivitiesNavDrawer.this, Note.class);
-                startActivity(intent2);
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new com.zealmobile.netsharestudyapp.Note()).commit();
                 break;
 
             case R.id.NoteShare:
@@ -101,35 +97,11 @@ public class ActivitiesNavDrawer extends AppCompatActivity
                 break;
 
             case R.id.Logout:
-                Button lougoutbtn = (Button)findViewById(R.id.testLogout);
-                lougoutbtn.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        final AlertDialog.Builder builder = new AlertDialog.Builder(ActivitiesNavDrawer.this);
-                        builder.setMessage("Do you want to log out?");
-                        builder.setCancelable(true);
-                        builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-                                dialogInterface.cancel();
-                            }
-                        });
-                        builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-                                finish();
-                            }
-                        });
-
-                        AlertDialog alert = builder.create();
-                        alert.show();
-                    }
-                });
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new com.zealmobile.netsharestudyapp.LogOut()).commit();
                 break;
         }
 
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-    /*      */
 }
