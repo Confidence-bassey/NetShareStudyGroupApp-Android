@@ -31,7 +31,8 @@ public class LogOut extends AppCompatActivity {
         builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                finish();
+                finishAffinity();
+                System.exit(0);
             }
         });
 
