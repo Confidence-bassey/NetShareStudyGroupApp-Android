@@ -1,6 +1,9 @@
 package com.zealmobile.netsharestudyapp;
 
 import android.util.Log;
+
+import com.zealmobile.netsharestudyapp.dao.UserAccountInterface;
+
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -18,5 +21,9 @@ public class RetrofitClient {
                     .build();
         }
         return retrofit;
+    }
+    public static UserAccountInterface getUAccountInterface(){
+        UserAccountInterface uaccInterface = getRetrofitInstance().create(UserAccountInterface.class);
+        return uaccInterface;
     }
 }
