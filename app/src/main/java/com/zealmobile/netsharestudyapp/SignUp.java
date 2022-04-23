@@ -31,7 +31,7 @@ import retrofit2.Response;
 
 import static android.widget.Toast.LENGTH_LONG;
 
-public class SignUp extends AppCompatActivity implements View.OnClickListener {
+public class SignUp extends AppCompatActivity {
 
     
     private EditText txtFirstName;
@@ -81,11 +81,19 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
             }
         });
 
-
+        Button btn = (Button)findViewById(R.id.btnSignUp);
+        Log.i("StudyGroup","Sign up button clicked");
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                handleCreateAccountButtonClick();
+                Log.i("StudyGroup","Sign up button called");
+            }
+        });
 
     }
 
-    @Override
+ /*   @Override
     public void onClick(View view) {
         switch(view.getId()) {
             case R.id.btnSignUp: {
@@ -95,19 +103,19 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
             default:
                 break;
         }
-    }
+    }*/
 
     protected void handleCreateAccountButtonClick() {
-        NewUserAccountModel newUserAccount = new NewUserAccountModel(
-                    txtFirstName.getText().toString(),
-                    txtLastName.getText().toString(),
-                    txtEmail.getText().toString(),
-                    txtPhoneNumber.getText().toString()
-        );
+        NewUserAccountModel newUserAccount = new NewUserAccountModel();
+                newUserAccount.setFirstName(txtFirstName.getText().toString());
+                newUserAccount.setLastName(txtLastName.getText().toString());
+                newUserAccount.setEmail(txtEmail.getText().toString());
+                newUserAccount.setPhoneNumber(txtPhoneNumber.getText().toString());
 
-        Log.i("Study Group", String.format("sending user account payload: \n%s\n", new Gson().toJson(newUserAccount)));
+
+        Log.i("StudyGroup", String.format("sending user account payload: \n%s\n", new Gson().toJson(newUserAccount)));
         //Todo: Here validate that every filled has been supplied a value
-        Call<CreateAccountResponse> createAccountApiCall = this._accountsAPI.creaxteUserAccount(newUserAccount);
+        Call<CreateAccountResponse> createAccountApiCall = RetrofitClient.getUAccountInterface().creaxteUserAccount(newUserAccount);
         createAccountApiCall.enqueue(
                 new Callback<CreateAccountResponse>(){
                     @Override

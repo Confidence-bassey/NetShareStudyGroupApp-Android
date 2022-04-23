@@ -67,6 +67,28 @@ public class ActivitiesNavDrawer extends AppCompatActivity
         });     */
     }
 
+    public void userLogOut(){
+        final AlertDialog.Builder builder = new AlertDialog.Builder(ActivitiesNavDrawer.this);
+        builder.setMessage("Do you want to log out?");
+        builder.setCancelable(true);
+        builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.cancel();
+            }
+        });
+        builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                finishAffinity();
+                System.exit(0);
+            }
+        });
+
+        AlertDialog alert = builder.create();
+        alert.show();
+    }
+
 
     @Override
     public void onBackPressed () {
@@ -97,7 +119,7 @@ public class ActivitiesNavDrawer extends AppCompatActivity
                 break;
 
             case R.id.Logout:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new com.zealmobile.netsharestudyapp.LogOut()).commit();
+                userLogOut();
                 break;
         }
 
