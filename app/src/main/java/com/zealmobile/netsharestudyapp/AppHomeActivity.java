@@ -1,8 +1,10 @@
 package com.zealmobile.netsharestudyapp;
 
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -68,5 +70,32 @@ public class AppHomeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    public void deleteUserAccount(View view){
+        Button deletebtn = (Button)findViewById(R.id.deleteAccount);
+        deletebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(AppHomeActivity.this);
+                builder.setTitle("Are you sure you want to delete this account?");
+                builder.setMessage("This action is irreversible...");
+                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        //Call<UserAccountModel> deleteAccount = RetrofitClient.getUAccountInterface().deleteUser(UserAccountModel.getId());
+                    }
+                });
+                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                });
+                AlertDialog alert = builder.create();
+                alert.show();
+            }
+        });
+
     }
 }
