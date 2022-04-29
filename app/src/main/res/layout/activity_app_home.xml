@@ -10,9 +10,8 @@
     <ListView
         android:id="@+id/lv_accountsList"
         android:layout_width="match_parent"
-        android:layout_height="550dp">
-
-
+        android:layout_height="550dp"
+        tools:listitem="@layout/list_item_design">
     </ListView>
 
     <Button

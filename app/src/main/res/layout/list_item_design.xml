@@ -21,15 +21,16 @@
                 android:layout_width="96dp"
                 android:layout_height="96dp"
                 android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
                 android:src="@drawable/ic_person" />
 
-            <LinearLayout
+          <!--  <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:orientation="vertical">
 
-                <TextView
+              <  <TextView
                     android:id="@+id/personName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -45,11 +46,11 @@
                     android:layout_marginTop="5dp"
                     android:text="Hi there!" />
 
-            </LinearLayout>
+            </LinearLayout>  -->
 
         </LinearLayout>
 
-        <TextView
+   <!--    <TextView
             android:id="@+id/ltime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -64,7 +65,7 @@
             android:layout_alignRight="@+id/ltime"
             android:onClick="deleteUserAccount"
             android:padding="10dp"
-            android:text="delete userAccount" />
+            android:text="delete userAccount" />   -->
 
     </RelativeLayout>
 </LinearLayout>

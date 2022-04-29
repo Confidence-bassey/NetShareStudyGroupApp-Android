@@ -1,11 +1,13 @@
 package com.zealmobile.netsharestudyapp;
 
+import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,18 +17,24 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 
+import com.zealmobile.netsharestudyapp.Models.NewUserAccountModel;
 import com.zealmobile.netsharestudyapp.Models.UserAccountModel;
+import com.zealmobile.netsharestudyapp.Models.UserListAdapter;
 import com.zealmobile.netsharestudyapp.dao.UserAccountInterface;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import de.hdodenhof.circleimageview.CircleImageView;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class AppHomeActivity extends AppCompatActivity {
 
+    CircleImageView viewImage;
+    int Image_Code = 1;
     UserAccountInterface _accountsAPI;
     ListView _accountsListVw;
     @Override
@@ -49,8 +57,10 @@ public class AppHomeActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<UserAccountModel>> call, Response<List<UserAccountModel>> response) {
                 //flatten the UserAccountModel object into a simple list of account names
-                List<String> userAccountNames = response.body().stream().map(u -> u.firstName+" "+u.lastName).collect(Collectors.toList());
-                _accountsListVw.setAdapter(new ArrayAdapter(AppHomeActivity.this, android.R.layout.simple_list_item_1,userAccountNames));
+                List<NewUserAccountModel> userAccountNames = response.body().stream().map(u -> {
+                    return new NewUserAccountModel(u.getFirstName(),u.getLastName(),u.getPhoneNumber(),u.getCreatedDate().toString());
+                }).collect(Collectors.toList());
+                _accountsListVw.setAdapter(new UserListAdapter(AppHomeActivity.this, new ArrayList<>(userAccountNames)));
             }
 
             @Override
@@ -72,7 +82,7 @@ public class AppHomeActivity extends AppCompatActivity {
         });
     }
 
-    public void deleteUserAccount(View view){
+  /*  public void deleteUserAccount(View view){
         Button deletebtn = (Button)findViewById(R.id.deleteAccount);
         deletebtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -97,5 +107,31 @@ public class AppHomeActivity extends AppCompatActivity {
             }
         });
 
+    }  */
+
+    public void imageViewItem(){
+        viewImage = (CircleImageView)findViewById(R.id.profile_pic);
+        viewImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent();
+                intent.setType("image/*");
+                intent.setAction(Intent.ACTION_GET_CONTENT);
+                Log.i("INFO","upload pic in progress");
+                startActivityForResult(Intent.createChooser(intent,"title"),Image_Code);
+                Log.i("INFO","upload pic in called");
+            }
+        });
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        Log.i("INFO","calling onActivity Result");
+        if(requestCode==1) {
+            Uri uri = data.getData();
+            viewImage.setImageURI(uri);
+        }
+    }
+
 }
