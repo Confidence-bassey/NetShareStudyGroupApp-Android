@@ -38,6 +38,8 @@ public class UserAccountModel {
     @SerializedName("phoneNumber")
     private String phoneNumber;
 
+    public int imageId;
+
     public int getId() {
         return id;
     }
@@ -117,4 +119,23 @@ public class UserAccountModel {
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
+
+    public int getImageId() {
+        return imageId;
+    }
+
+    public void setImageId(int imageId) {
+        this.imageId = imageId;
+    }
+
+    public UserAccountModel() {
+
+    }
+
+    public UserAccountModel(int imageId,String firstName, String lastName) {
+        this.imageId = imageId;
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
 }

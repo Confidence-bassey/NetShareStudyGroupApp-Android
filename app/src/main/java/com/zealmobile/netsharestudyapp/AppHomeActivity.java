@@ -57,9 +57,7 @@ public class AppHomeActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<UserAccountModel>> call, Response<List<UserAccountModel>> response) {
                 //flatten the UserAccountModel object into a simple list of account names
-                List<NewUserAccountModel> userAccountNames = response.body().stream().map(u -> {
-                    return new NewUserAccountModel(u.getFirstName(),u.getLastName(),u.getPhoneNumber(),u.getCreatedDate().toString());
-                }).collect(Collectors.toList());
+                List<UserAccountModel> userAccountNames = response.body().stream().map(u -> {return new UserAccountModel(u.getImageId(),u.getFirstName(),u.getLastName());}).collect(Collectors.toList());
                 _accountsListVw.setAdapter(new UserListAdapter(AppHomeActivity.this, new ArrayList<>(userAccountNames)));
             }
 
