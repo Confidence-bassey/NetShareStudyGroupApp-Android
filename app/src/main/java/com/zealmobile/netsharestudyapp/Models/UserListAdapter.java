@@ -16,6 +16,7 @@ import androidx.annotation.Nullable;
 import com.zealmobile.netsharestudyapp.R;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -38,14 +39,25 @@ public class UserListAdapter extends ArrayAdapter<UserAccountModel> {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_item_design,parent,false);
         }
 
+
+        //
         Log.i("INFO","Calling list items");
         CircleImageView imageView = (CircleImageView)convertView.findViewById(R.id.profile_pic);
+
+        TextView profileName = (TextView) convertView.findViewById(R.id.personName);
+        TextView statusMsg = (TextView) convertView.findViewById(R.id.lmessage);
         Log.i("INFO","Done Calling list items");
 
-      userDetails.setImageId(imageView.getId());
-     //   userDetails.setFirstName(txtFirstName.getText().toString());
-       //  userDetails.setLastName(txtLastName.getText().toString());
+        profileName.setText(userDetails.getFirstName()+" "+userDetails.getLastName());
+        statusMsg.setText(randomStatus());
+
 
         return convertView;
+    }
+
+    private String randomStatus(){
+        String[] status = new String[]{"Comp Sci, Unical", "MicroBiology, Uyo", "Mathematics, Uniben", "Mech Engrn., Delsu"};
+        int pos = ((int) Math.random()) * status.length;
+        return pos < status.length? status[pos]: status[pos-1];
     }
 }

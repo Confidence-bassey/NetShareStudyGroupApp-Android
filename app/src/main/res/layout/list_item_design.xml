@@ -13,6 +13,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginVertical="10dp"
+            android:id="@+id/ll_profileImg"
             android:orientation="horizontal">
 
             <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -22,50 +23,32 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginLeft="20dp"
                 android:src="@drawable/ic_person" />
-
-             <LinearLayout
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:layout_marginLeft="20dp"
-                   android:layout_marginStart="20dp"
-                   android:orientation="vertical">
-
-                     <TextView
-                          android:id="@+id/personName"
-                          android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
-                          android:text="Name"
-                          android:textColor="@color/black"
-                          android:textSize="26sp"
-                          android:textStyle="bold" />
-
-                      <TextView
-                          android:id="@+id/lmessage"
-                          android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
-                          android:layout_marginTop="5dp"
-                          android:text="Hi there!" />
-
-            </LinearLayout>
-
         </LinearLayout>
 
-   <!--    <TextView
-            android:id="@+id/ltime"
+        <TextView
+            android:id="@+id/personName"
             android:layout_width="wrap_content"
+            android:layout_toRightOf="@id/ll_profileImg"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:padding="15dp" />
+            android:text="Name blallalalal"
+            android:paddingLeft="12dp"
+            android:paddingTop="15dp"
+            android:textColor="@color/black"
+            android:textSize="26sp"
+            android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/deleteAccount"
+        <TextView
+            android:id="@+id/lmessage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/ltime"
-            android:layout_alignRight="@+id/ltime"
-            android:onClick="deleteUserAccount"
-            android:padding="10dp"
-            android:text="delete userAccount" />   -->
+            android:layout_toRightOf="@id/ll_profileImg"
+            android:layout_below="@id/personName"
+            android:textColor="@color/black"
+            android:paddingLeft="12dp"
+            android:text="MicroBiology, Unical"
+            android:textSize="26sp"
+
+            />
 
     </RelativeLayout>
 </LinearLayout>
