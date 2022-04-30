@@ -40,14 +40,12 @@ public class UserListAdapter extends ArrayAdapter<UserAccountModel> {
 
         Log.i("INFO","Calling list items");
         CircleImageView imageView = (CircleImageView)convertView.findViewById(R.id.profile_pic);
-        EditText txtFirstName = (EditText) convertView.findViewById(R.id.txt_signup_firstName);
-        EditText txtLastName = (EditText) convertView.findViewById(R.id.txt_signup_lastName);
         Log.i("INFO","Done Calling list items");
 
       userDetails.setImageId(imageView.getId());
      //   userDetails.setFirstName(txtFirstName.getText().toString());
        //  userDetails.setLastName(txtLastName.getText().toString());
 
-        return super.getView(position, convertView, parent);
+        return convertView;
     }
 }
