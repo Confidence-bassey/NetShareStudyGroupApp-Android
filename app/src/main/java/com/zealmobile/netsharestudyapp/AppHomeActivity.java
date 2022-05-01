@@ -12,6 +12,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -45,7 +46,7 @@ public class AppHomeActivity extends AppCompatActivity {
         _accountsAPI = RetrofitClient.getRetrofitInstance().create(UserAccountInterface.class);
         _accountsListVw =(ListView) findViewById(R.id.lv_accountsList);
 
-
+        //_accountsListVw.setOnItemClickListener(new);
         this.initScreen();
     }
 
@@ -130,6 +131,28 @@ public class AppHomeActivity extends AppCompatActivity {
             Uri uri = data.getData();
             viewImage.setImageURI(uri);
         }
+    }
+
+    public void viewDetails(){
+        //new OnItemClickListener
+        UserAccountModel userModel = new UserAccountModel();
+        String firstName, lastName, email, phoneNumber;
+        int imageId;
+        imageId = userModel.getImageId();
+        firstName = userModel.getFirstName();
+        lastName = userModel.getLastName();
+        email = userModel.getEmail();
+        phoneNumber = userModel.getPhoneNumber();
+
+        _accountsListVw.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view,
+                                    int position, long id) {
+
+                Intent intent1 = new Intent(AppHomeActivity.this, UserDetailsView.class);
+                intent1.putExtra("fullname", firstName);
+            }
+        });
     }
 
 }

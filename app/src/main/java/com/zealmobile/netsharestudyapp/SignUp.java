@@ -81,7 +81,7 @@ public class SignUp extends AppCompatActivity {
                 handleCreateAccountButtonClick();
             }
         });
-        
+
     }
         protected void handleCreateAccountButtonClick () {
             NewUserAccountModel newUserAccount = new NewUserAccountModel();
