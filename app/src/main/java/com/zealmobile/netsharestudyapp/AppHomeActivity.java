@@ -34,6 +34,7 @@ import retrofit2.Response;
 
 public class AppHomeActivity extends AppCompatActivity {
 
+    List<UserAccountModel> userAccountNames;
     CircleImageView viewImage;
     int Image_Code = 1;
     UserAccountInterface _accountsAPI;
@@ -48,6 +49,7 @@ public class AppHomeActivity extends AppCompatActivity {
 
         //_accountsListVw.setOnItemClickListener(new);
         this.initScreen();
+        this.viewDetails();
     }
 
 
@@ -58,7 +60,7 @@ public class AppHomeActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<UserAccountModel>> call, Response<List<UserAccountModel>> response) {
                 //flatten the UserAccountModel object into a simple list of account names
-                List<UserAccountModel> userAccountNames = response.body().stream().map(u -> {return new UserAccountModel(u.getImageId(),u.getFirstName(),u.getLastName());}).collect(Collectors.toList());
+                userAccountNames = response.body().stream().map(u -> {return new UserAccountModel(u.getImageId(),u.getFirstName(),u.getLastName());}).collect(Collectors.toList());
                 _accountsListVw.setAdapter(new UserListAdapter(AppHomeActivity.this, new ArrayList<>(userAccountNames)));
             }
 
@@ -108,49 +110,23 @@ public class AppHomeActivity extends AppCompatActivity {
 
     }  */
 
-    public void imageViewItem(){
-        viewImage = (CircleImageView)findViewById(R.id.profile_pic);
-        viewImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent();
-                intent.setType("image/*");
-                intent.setAction(Intent.ACTION_GET_CONTENT);
-                Log.i("INFO","upload pic in progress");
-                startActivityForResult(Intent.createChooser(intent,"title"),Image_Code);
-                Log.i("INFO","upload pic in called");
-            }
-        });
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        Log.i("INFO","calling onActivity Result");
-        if(requestCode==1) {
-            Uri uri = data.getData();
-            viewImage.setImageURI(uri);
-        }
-    }
-
     public void viewDetails(){
-        //new OnItemClickListener
-        UserAccountModel userModel = new UserAccountModel();
-        String firstName, lastName, email, phoneNumber;
-        int imageId;
-        imageId = userModel.getImageId();
-        firstName = userModel.getFirstName();
-        lastName = userModel.getLastName();
-        email = userModel.getEmail();
-        phoneNumber = userModel.getPhoneNumber();
+        //= new UserAccountModel();
 
         _accountsListVw.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
 
+                Log.i("INFO","calling intent1");
+                UserAccountModel user = userAccountNames.get(position);
                 Intent intent1 = new Intent(AppHomeActivity.this, UserDetailsView.class);
-                intent1.putExtra("fullname", firstName);
+                intent1.putExtra("image_id", user.getImageId());
+                intent1.putExtra("fullname", (user.getFirstName()+" " +user.getLastName()));
+                intent1.putExtra("email", user.getEmail());
+                intent1.putExtra("phonenumber", user.getPhoneNumber());
+                startActivity(intent1);
+                Log.i("INFO","Done calling intent1");
             }
         });
     }
