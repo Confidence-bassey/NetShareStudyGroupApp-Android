@@ -43,15 +43,11 @@ public class UserDetailsView extends AppCompatActivity {
         email = findViewById(R.id.u_email);
         phoneNo = findViewById(R.id.u_phoneNumber);
 
-        //int uimage = getIntent().getIntExtra(image_id.);
         int uimage = getIntent().getIntExtra("image_id",0);
         unames = getIntent().getStringExtra("fullname");
         uemail = getIntent().getStringExtra("email");
         uphoneNumber = getIntent().getStringExtra("phonenumber");
 
-       // Log.i("INFO","calling getIntent (unames)");
-        //names.setText(userDetails.getFirstName()+" "+userDetails.getLastName());
-       // Log.i("INFO","Done calling getIntent (unames)");
         Log.i("INFO","calling getIntent image_pic");
         image_pic.setImageURI(uri);
         image_pic.setOnClickListener(new View.OnClickListener() {

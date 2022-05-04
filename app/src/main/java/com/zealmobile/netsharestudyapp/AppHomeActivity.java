@@ -47,7 +47,6 @@ public class AppHomeActivity extends AppCompatActivity {
         _accountsAPI = RetrofitClient.getRetrofitInstance().create(UserAccountInterface.class);
         _accountsListVw =(ListView) findViewById(R.id.lv_accountsList);
 
-        //_accountsListVw.setOnItemClickListener(new);
         this.initScreen();
         this.viewDetails();
     }
@@ -111,7 +110,6 @@ public class AppHomeActivity extends AppCompatActivity {
     }  */
 
     public void viewDetails(){
-        //= new UserAccountModel();
 
         _accountsListVw.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

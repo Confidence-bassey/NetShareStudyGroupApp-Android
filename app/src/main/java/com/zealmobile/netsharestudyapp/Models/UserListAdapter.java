@@ -22,10 +22,6 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class UserListAdapter extends ArrayAdapter<UserAccountModel> {
 
-  //  private CircleImageView imageView;
-  //  private EditText txtFirstName;
-  //  private EditText txtLastName;
-
     public UserListAdapter(Context context, ArrayList<UserAccountModel> userDetails){
         super(context, R.layout.list_item_design, userDetails);
     }
