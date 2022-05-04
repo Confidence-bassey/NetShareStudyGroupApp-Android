@@ -16,6 +16,8 @@ public class NewUserAccountModel {
     @SerializedName("phoneNumber")
     public String phoneNumber;
 
+    public int imageId;
+
     public String getFirstName() {
         return firstName;
     }
@@ -48,7 +50,15 @@ public class NewUserAccountModel {
         this.phoneNumber = phoneNumber;
     }
 
-     public NewUserAccountModel(String fistName, String lastName, String email, String phone) {
+    public int getImageId() {
+        return imageId;
+    }
+
+    public void setImageId(int imageId) {
+        this.imageId = imageId;
+    }
+
+    public NewUserAccountModel(String fistName, String lastName, String email, String phone) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
