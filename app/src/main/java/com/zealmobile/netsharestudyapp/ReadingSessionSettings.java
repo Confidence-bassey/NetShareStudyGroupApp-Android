@@ -28,7 +28,7 @@ public class ReadingSessionSettings extends Fragment {
             public void onClick(View view) {
                 FragmentManager fm = getChildFragmentManager();
                 SessionTitle readingSecTitle = new SessionTitle();
-                fm.beginTransaction().replace(R.id.readingSession, readingSecTitle).commit();
+                fm.beginTransaction().replace(R.id.RsessionSettings, readingSecTitle).commit();
             }
         });
         return view;

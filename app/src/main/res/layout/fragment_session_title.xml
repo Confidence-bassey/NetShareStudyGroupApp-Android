@@ -3,7 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/sesTitle"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".SessionTitle">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    >
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
@@ -11,4 +18,36 @@
         android:layout_height="match_parent"
         android:text="@string/hello_blank_fragment" />
 
+   <!-- <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/TakeNote"
+        android:contentDescription="Create Reading Session"
+        android:src="@drawable/ic_note"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:elevation="4dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        app:elevation="6dp"
+        app:rippleColor="@color/New_Blue"
+        android:layout_margin="16dp"/>  -->
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/TakeNote"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:text="Note Point"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:background="@color/New_Blue"
+            android:padding="20dp"
+            android:layout_margin="16dp"/>
+
+
+    </RelativeLayout>
 </FrameLayout>
