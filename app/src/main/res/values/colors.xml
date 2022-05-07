@@ -12,6 +12,7 @@
     <color name="highlighted_text_material_dark">#6680CBC4</color>
     <color name="Royal_Blue">#4169E1</color>
     <color name="Sapphire_Blue">#0F52BA</color>
+    <color name="New_Blue">#1129B1</color>
     <color name="Sky_Blue">#87CEEB</color>
     <color name="Turquiose">#40E0D0</color>
     <color name="Ultramarine">#0437F2</color>
@@ -22,6 +23,7 @@
     <color name="Neon_Blue">#1F51FF</color>
     <color name="Midnight_Blue">#191970</color>
     <color name="Navy_Blue">#000080</color>
+    <color name="NC">#0D1751</color>
     <color name="Indigo">#3F00FF</color>
     <color name="Iris">#5D3FD3</color>
     <color name="Jade">#00A36C</color>
@@ -67,6 +69,7 @@
     <color name="Blue_700">#1976D2</color>
     <color name="Blue_200">#90CAF9</color>
     <color name="Blue_500">#2196F3</color>
+
 
 
 </resources>

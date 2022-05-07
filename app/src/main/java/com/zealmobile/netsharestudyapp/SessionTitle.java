@@ -8,30 +8,27 @@ import androidx.fragment.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
+ * Use the  factory method to
  * create an instance of this fragment.
  */
-public class ReadingSession extends Fragment {
-
-    FloatingActionButton fbtn;
+public class SessionTitle extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_reading_session, container, false);
-        fbtn = view.findViewById(R.id.NewReadingSession);
-        fbtn.setBackgroundColor(R.drawable.custombtnbg);
-        fbtn.setOnClickListener(new View.OnClickListener() {
+        View view = inflater.inflate(R.layout.fragment_session_title, container, false);
+        Button addNotebtn = view.findViewById(R.id.TakeNote);
+        addNotebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 FragmentManager fm = getChildFragmentManager();
-                ReadingSessionSettings readingSecSetting = new ReadingSessionSettings();
-                fm.beginTransaction().replace(R.id.readingSession, readingSecSetting).commit();
+                AddNewNote newNote = new AddNewNote();
+                fm.beginTransaction().replace(R.id.sesTitle, newNote).commit();
             }
         });
         return view;

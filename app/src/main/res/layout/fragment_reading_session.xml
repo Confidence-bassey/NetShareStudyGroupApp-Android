@@ -3,9 +3,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/readingSession"
     tools:context=".ReadingSession">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/readingSsion">
     <!-- TODO: Update blank fragment layout -->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/RSRecyclerView"/>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -16,4 +28,37 @@
         android:textColor="@color/Neon_Blue"
         android:textSize="20sp"/>
 
+   <!-- <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/openReadingSession"
+        android:text="OPEN SESSION"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:padding="20dp"
+        android:layout_margin="16dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:background="@color/Sapphire_Blue"
+        /> 08060335875   -->
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/NewReadingSession"
+            android:contentDescription="Create Reading Session"
+            android:src="@drawable/ic_plus_sign"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:background="@drawable/custombtnbg"
+            android:elevation="4dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            app:elevation="6dp"
+            app:rippleColor="@color/New_Blue"
+            android:layout_margin="16dp"/>
+
+    </RelativeLayout>
 </FrameLayout>
