@@ -12,18 +12,23 @@
         android:layout_height="match_parent">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_blank_fragment"
-        android:padding="15dp"
-        android:layout_marginBottom="10dp"
-        android:id="@+id/welcome"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sessionSettings"
+            android:hint="Title"
+            android:textColor="@color/black"
+            android:textColorHint="@color/Glaucous"
+            android:layout_margin="15dp"
+            android:padding="15dp"
+            android:drawablePadding="20dp"
+            android:layout_marginBottom="10dp"
+            android:inputType="text"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/welcome"
+        android:layout_below="@+id/sessionSettings"
         android:id="@+id/fDD"
         android:layout_marginBottom="10dp"
         android:hint="Select type"
@@ -77,6 +82,3 @@
             android:layout_alignParentEnd="true" />
     </RelativeLayout>
 </FrameLayout>
-
-
-<!--@style/Theme.MaterialComponents.NoActionBar-->
