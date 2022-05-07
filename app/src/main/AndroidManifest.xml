@@ -16,7 +16,7 @@
         <activity android:name=".UserDetailsView" />
         <activity
             android:name=".ActivitiesNavDrawer"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
         <activity android:name=".User_Dashboard" />
         <activity android:name=".AppHomeActivity" />
         <activity android:name=".Notification" />
