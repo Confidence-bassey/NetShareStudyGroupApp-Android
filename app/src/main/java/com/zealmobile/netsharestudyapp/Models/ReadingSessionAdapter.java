@@ -58,4 +58,5 @@ public class ReadingSessionAdapter extends RecyclerView.Adapter<ReadingSessionAd
             readingListItemtV.setText(enteredTitle.getText().toString());
         }
     }
+
 }
