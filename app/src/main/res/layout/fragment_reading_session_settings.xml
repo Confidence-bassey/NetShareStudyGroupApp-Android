@@ -2,82 +2,95 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:id="@+id/RsessionSettings"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".ReadingSessionSettings">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <!-- TODO: Update blank fragment layout -->
+        <!-- TODO: Update blank fragment layout -->
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/sessionSettings"
-            android:hint="Title"
-            android:textColor="@color/black"
-            android:textColorHint="@color/Glaucous"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_margin="15dp"
-            android:padding="15dp"
-            android:drawablePadding="20dp"
             android:layout_marginBottom="10dp"
-            android:inputType="text"/>
+            android:drawablePadding="20dp"
+            android:hint="Title"
+            android:inputType="text"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/Glaucous" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/sessionSettings"
-        android:id="@+id/fDD"
-        android:layout_marginBottom="10dp"
-        android:hint="Select type"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
-
-        <AutoCompleteTextView
-            android:id="@+id/fDDAuto"
+     <!--  <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fDD"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="none"
-            />
+            android:layout_below="@+id/sessionSettings"
+            android:layout_marginBottom="10dp"
+            android:hint="Select type">
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <AutoCompleteTextView
+                android:id="@+id/fDDAuto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/readingResource"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/fDD"
-        android:hint="select resource">
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <AutoCompleteTextView
-            android:id="@+id/resourceAuto"
+       <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/readingResource"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="none"
-            />
+            android:layout_below="@+id/fDD"
+            android:hint="select resource">
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <AutoCompleteTextView
+                android:id="@+id/resourceAuto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none" />
+
+                android:layout_below="@+id/fDD"
+
+        </com.google.android.material.textfield.TextInputLayout>   -->
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp" />
+
 
         <Button
+            android:id="@+id/openResource"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/openResource"
-            android:layout_below="@+id/readingResource"
+            android:layout_below="@+id/spinner"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="40dp"
+            android:backgroundTint="@color/Sapphire_Blue"
+            android:gravity="center"
             android:text="OPEN RESOURCE"
             android:textAlignment="center"
-            android:gravity="center"
-            android:layout_centerHorizontal="true"
-            android:textStyle="bold"
             android:textColor="@color/white"
-            android:backgroundTint="@color/Sapphire_Blue"/>
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/startSession"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="16dp"
@@ -92,7 +105,6 @@
             android:textColor="@color/white"
             android:textSize="12sp"
             android:textStyle="bold"
-            app:backgroundTint="#0F3EB6"
-            android:layout_alignParentEnd="true" />
+            app:backgroundTint="#0F3EB6" />
     </RelativeLayout>
 </FrameLayout>
