@@ -26,10 +26,11 @@
             android:textSize="15sp"/>
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RSRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/RSRecyclerView"
-            android:layout_below="@+id/groupFrag"/>
+            android:layout_below="@+id/groupFrag"
+            tools:listitem="@layout/rsrecycler_list_item" />
 
         <!--
 
