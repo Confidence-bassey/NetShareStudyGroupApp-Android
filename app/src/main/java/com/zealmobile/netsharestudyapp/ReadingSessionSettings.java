@@ -2,11 +2,13 @@ package com.zealmobile.netsharestudyapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import java.io.File;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import android.os.Environment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -37,6 +39,7 @@ public class ReadingSessionSettings extends Fragment {
     int position;
 
     Spinner spinner;
+    Button startSes;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -45,7 +48,7 @@ public class ReadingSessionSettings extends Fragment {
         View view = inflater.inflate(R.layout.fragment_reading_session_settings, container, false);
 
        /* Log.i("INFO","Calling resources");
-        Button startSes = view.findViewById(R.id.startSession);
+
         readingsecType = view.findViewById(R.id.fDD);
         //readingResource = view.findViewById(R.id.readingResource);
         sesType = view.findViewById(R.id.fDDAuto);
@@ -53,6 +56,7 @@ public class ReadingSessionSettings extends Fragment {
         openResbtn = view.findViewById(R.id.openResource);   */
 
         spinner = (Spinner) view.findViewById(R.id.spinner);
+        startSes = view.findViewById(R.id.startSession);
 
         String [] readingResouce = {"select from phone(pdf)", "browse material"};
         String [] sessionType = {"Personal Study", "group study"};
@@ -69,9 +73,12 @@ public class ReadingSessionSettings extends Fragment {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 switch (i){
                     case 0:
+                        //startSes.setVisibility(View.GONE);
+                        //openResbtn.setVisibility(View.VISIBLE);
                         Toast.makeText(getContext(),"it finally worked, select from phone(pdf) clicked", Toast.LENGTH_LONG).show();
                         break;
                     case 1:
+                        openMaterial();
                         Toast.makeText(getContext(),"it finally worked, browse material clicked", Toast.LENGTH_LONG).show();
 
                 }
@@ -82,6 +89,8 @@ public class ReadingSessionSettings extends Fragment {
 
             }
         });
+
+
 
 
      /*   Log.i("INFO","Calling bindings");
@@ -131,5 +140,35 @@ public class ReadingSessionSettings extends Fragment {
             }
         });
     }  */
+
+    public void implementBtnClick(){
+        startSes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //startSes.setVisibility(View.GONE);
+                openResbtn.setVisibility(View.GONE);
+                sesType.setVisibility(View.GONE);
+                sesResource.setVisibility(View.GONE);
+                FragmentManager fm = getChildFragmentManager();
+                SessionTitle readingSecTitle = new SessionTitle();
+                fm.beginTransaction().replace(R.id.RsessionSettings, readingSecTitle).commit();
+            }
+        });
+    }
+
+    public void openMaterial(){
+       // openResbtn.setVisibility(View.VISIBLE);
+        //openResbtn.setOnClickListener(new View.OnClickListener() {
+          //  @Override
+           // public void onClick(View view) {
+                        Intent intent = new Intent(Intent.ACTION_VIEW);
+                        intent.setType("application/pdf");
+                        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                        new File(Environment.getExternalStorageDirectory().getAbsolutePath());
+                        startActivity(intent);
+          //  }
+       // });
+    }
+
 
 }

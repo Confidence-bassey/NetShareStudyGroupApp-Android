@@ -82,6 +82,7 @@
             android:backgroundTint="@color/Sapphire_Blue"
             android:gravity="center"
             android:text="OPEN RESOURCE"
+            android:visibility="invisible"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textStyle="bold" />
