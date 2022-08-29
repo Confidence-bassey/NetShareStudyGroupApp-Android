@@ -21,6 +21,7 @@
     <string name="sign_up_btn">Sign Up</string>
     <string name="email_hint">email</string>
     <string name="password_hint">password</string>
+    <string name="confirm_password">confirm password</string>
     <string name="title_activity_app_home">NetShare Study Buddy</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
