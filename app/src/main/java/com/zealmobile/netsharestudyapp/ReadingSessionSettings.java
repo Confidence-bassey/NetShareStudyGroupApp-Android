@@ -137,6 +137,13 @@ public class ReadingSessionSettings extends Fragment {
                         break;
                 }
 
+        public void openpdFile(){
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setType("application/pdf");
+        new File(Environment.getExternalStorageDirectory().getAbsolutePath());
+        startActivity(intent);
+    }
+
             }
         });
     }  */
