@@ -9,7 +9,67 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/Username"
-        />
+        android:id="@+id/txt_Username"
+        android:hint="email or phone no."
+        android:textColor="@color/black"
+        android:textColorHint="@color/Glaucous"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:drawableLeft="@drawable/ic_email"
+        android:drawablePadding="20dp"
+        android:inputType="text"
+        android:background="@color/white">
+
+    </EditText>
+
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_signIn_password"
+        android:hint="@string/password_hint"
+        android:textColor="@color/black"
+        android:textColorHint="@color/Glaucous"
+        android:layout_below="@id/txt_Username"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:drawableLeft="@drawable/ic_phone"
+        android:drawablePadding="20dp"
+        android:background="@color/white">
+    </EditText>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_confirm_password"
+        android:hint="@string/confirm_password"
+        android:textColor="@color/black"
+        android:textColorHint="@color/Glaucous"
+        android:layout_below="@id/txt_signIn_password"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:visibility="invisible"
+        android:drawableLeft="@drawable/ic_phone"
+        android:drawablePadding="20dp"
+        android:background="@color/white">
+    </EditText>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnLogin"
+        android:text="Login"
+        android:background="@color/Dark_Pink"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:layout_below="@id/txt_confirm_password"
+        android:layout_margin="10dp"
+        android:textColorHighlight="@color/Cerise"
+        android:layout_centerHorizontal="true"
+        android:paddingRight="25dp"
+        android:paddingLeft="25dp"
+        android:textColor="@color/white">
+    </Button>
 
 </RelativeLayout>
