@@ -11,6 +11,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Environment;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -18,6 +19,8 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
+
+import java.io.File;
 
 public class ActivitiesNavDrawer extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener{
@@ -89,6 +92,39 @@ public class ActivitiesNavDrawer extends AppCompatActivity
         alert.show();
     }
 
+  /*  private void sendEmail() {
+      //  CourseInfo course = (CourseInfo) spinner.getSelectedItem();
+        String subject = noteTitle.getText().toString();
+        String text = "What I have learnt from Netshare Study App /" + course.getTitle() + "\n" + noteBody.getText();
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("message/rfc2822");
+        intent.putExtra(Intent.EXTRA_SUBJECT, subject);
+        intent.putExtra(Intent.EXTRA_TEXT, text);
+        startActivity(intent);
+    }   */
+
+    private void shareNote() {
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("message/rfc2822");
+        //intent.putExtra(Intent.EXTRA_SUBJECT, subject);
+        //intent.putExtra(Intent.EXTRA_TEXT, text);
+        startActivity(intent);
+    }
+
+    public void openpdFile(){
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setType("application/pdf");
+        new File(Environment.getExternalStorageDirectory().getAbsolutePath());
+        startActivity(intent);
+    }
+
+    public void ViewUsers(){
+        Intent intent = new Intent(ActivitiesNavDrawer.this, AppHomeActivity.class);
+        //intent.setType("application/pdf");
+        //new File(Environment.getExternalStorageDirectory().getAbsolutePath());
+        startActivity(intent);
+    }
+
 
     @Override
     public void onBackPressed () {
@@ -114,8 +150,17 @@ public class ActivitiesNavDrawer extends AppCompatActivity
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new com.zealmobile.netsharestudyapp.Note()).commit();
                 break;
 
+            case R.id.Users:
+                ViewUsers();
+                break;
+
             case R.id.NoteShare:
-                Toast.makeText(this, "Share Note", Toast.LENGTH_SHORT);
+                //Toast.makeText(this, "Share Note", Toast.LENGTH_SHORT);
+                shareNote();
+                break;
+
+            case R.id.Dashboard:
+                Toast.makeText(this, "Go to dashboard", Toast.LENGTH_SHORT);
                 break;
 
             case R.id.Logout:

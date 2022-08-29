@@ -94,9 +94,7 @@
         android:layout_centerHorizontal="true"
         android:paddingRight="25dp"
         android:paddingLeft="25dp"
-
         android:textColor="@color/white">
-
     </Button>
 
 </RelativeLayout>

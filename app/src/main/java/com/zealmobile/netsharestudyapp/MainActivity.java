@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(MainActivity.this, "Testing button click", LENGTH_LONG);
-                Intent intent1 = new Intent(MainActivity.this, AppHomeActivity.class);
+                Intent intent1 = new Intent(MainActivity.this, SignIn.class);
                 startActivity(intent1);
             }
         });

@@ -13,35 +13,41 @@
         android:id="@+id/readingSsion">
     <!-- TODO: Update blank fragment layout -->
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reading Sessions"
+            android:id="@+id/groupFrag"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/Neon_Blue"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="15sp"/>
+
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RSRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/RSRecyclerView"/>
+            android:layout_below="@+id/groupFrag"
+            tools:listitem="@layout/reading_list_item_design" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="READING SESSION FRAGMENT"
-        android:id="@+id/groupFrag"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:textColor="@color/Neon_Blue"
-        android:textSize="20sp"/>
+        <!--
 
-   <!-- <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/openReadingSession"
-        android:text="OPEN SESSION"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:padding="20dp"
-        android:layout_margin="16dp"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:textSize="12sp"
-        android:background="@color/Sapphire_Blue"
-        /> 08060335875   -->
+          <Button
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:id="@+id/openReadingSession"
+              android:text="OPEN SESSION"
+              android:layout_alignParentRight="true"
+              android:layout_alignParentBottom="true"
+              android:padding="20dp"
+              android:layout_margin="16dp"
+              android:textColor="@color/white"
+              android:textStyle="bold"
+              android:textSize="12sp"
+              android:background="@color/Sapphire_Blue"
+              /> 08060335875   -->
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:layout_width="100dp"

@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+//import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
@@ -53,9 +54,13 @@ public class UserDetailsView extends AppCompatActivity {
         image_pic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent();
+                Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
                 intent.setType("image/*");
-                intent.setAction(Intent.ACTION_GET_CONTENT);
+               // Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+               // intent.putExtra(MediaStore.EXTRA_OUTPUT, uri);
+                //This is supposed to be written in Apphomeactivty while we get the intent using onActivityResult method here
+                //     todo: after church today
+                //intent.setAction(Intent.ACTION_GET_CONTENT);
                 Log.i("INFO","upload pic in progress");
                 startActivityForResult(Intent.createChooser(intent,"title"),Image_Code);
                 Log.i("INFO","upload pic in called");
