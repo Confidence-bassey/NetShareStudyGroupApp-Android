@@ -50,12 +50,12 @@ public class ReadingSessionAdapter extends RecyclerView.Adapter<ReadingSessionAd
 
         public ReadingSessionViewHolder(View readingItemView){
             super(readingItemView);
-            readingListItemtV = (TextView) readingItemView.findViewById(R.id.tvTitle);
-            enteredTitle = (EditText) readingItemView.findViewById(R.id.sessionSettings);
+         //   readingListItemtV = (TextView) readingItemView.findViewById(R.id.tvTitle);
+         //   enteredTitle = (EditText) readingItemView.findViewById(R.id.sessionSettings);
         }
 
         void bind(int listItemIdex){
-            readingListItemtV.setText(enteredTitle.getText().toString());
+           // readingListItemtV.setText(enteredTitle.getText().toString());
         }
     }
 
