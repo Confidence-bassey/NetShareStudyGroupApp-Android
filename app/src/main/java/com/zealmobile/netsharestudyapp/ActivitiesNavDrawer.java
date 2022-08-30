@@ -105,7 +105,8 @@ public class ActivitiesNavDrawer extends AppCompatActivity
 
     private void shareNote() {
         Intent intent = new Intent(Intent.ACTION_SEND);
-        intent.setType("message/rfc2822");
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
+        intent.setType("text/plain");
         //intent.putExtra(Intent.EXTRA_SUBJECT, subject);
         //intent.putExtra(Intent.EXTRA_TEXT, text);
         startActivity(intent);
