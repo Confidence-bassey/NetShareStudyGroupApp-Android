@@ -18,7 +18,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/viewUserdboard"
-        android:text="ViewDashBoard"
+        android:text="View reading sessions"
         android:background="@color/Sapphire_Blue"
         android:elevation="4dp"
         android:onClick="showUserDashBoard"
