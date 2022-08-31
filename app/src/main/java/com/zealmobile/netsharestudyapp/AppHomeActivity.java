@@ -109,6 +109,7 @@ public class AppHomeActivity extends AppCompatActivity {
 
     }  */
 
+    //This is where I could manipulate to view a user dashboard
     public void viewDetails(){
 
         _accountsListVw.setOnItemClickListener(new AdapterView.OnItemClickListener() {
