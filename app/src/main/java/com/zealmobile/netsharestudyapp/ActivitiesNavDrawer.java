@@ -10,6 +10,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
@@ -47,8 +48,8 @@ public class ActivitiesNavDrawer extends AppCompatActivity
         toggle.syncState();
 
         if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new com.zealmobile.netsharestudyapp.ReadingSession()).commit();
-            navigationView.setCheckedItem(R.id.createSession);
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new com.zealmobile.netsharestudyapp.Group()).commit();
+            navigationView.setCheckedItem(R.id.TutorialSession);
         }
 
      /*   Button testbtn = (Button)findViewById(R.id.testing);
@@ -126,6 +127,11 @@ public class ActivitiesNavDrawer extends AppCompatActivity
         startActivity(intent);
     }
 
+    public void learningResources(){
+        Intent intent = new Intent(ActivitiesNavDrawer.this, LearningResources.class);
+        startActivity(intent);
+    }
+
 
     @Override
     public void onBackPressed () {
@@ -155,6 +161,15 @@ public class ActivitiesNavDrawer extends AppCompatActivity
                 ViewUsers();
                 break;
 
+            case R.id.GoMyCode:
+                //Toast.makeText(this, "Share Note", Toast.LENGTH_SHORT);
+                consultGoMyCode();
+                break;
+
+            case R.id.LearningResources:
+                learningResources();
+                break;
+
             case R.id.NoteShare:
                 //Toast.makeText(this, "Share Note", Toast.LENGTH_SHORT);
                 shareNote();
@@ -171,5 +186,10 @@ public class ActivitiesNavDrawer extends AppCompatActivity
 
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void consultGoMyCode() {
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://gomycode.com/NG-EN/home"));
+        startActivity(browserIntent);
     }
 }

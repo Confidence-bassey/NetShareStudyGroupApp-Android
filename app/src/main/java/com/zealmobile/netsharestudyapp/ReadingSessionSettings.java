@@ -1,6 +1,7 @@
 package com.zealmobile.netsharestudyapp;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import java.io.File;
 
@@ -58,7 +59,7 @@ public class ReadingSessionSettings extends Fragment {
         spinner = (Spinner) view.findViewById(R.id.spinner);
         startSes = view.findViewById(R.id.startSession);
 
-        String [] readingResouce = {"select from phone(pdf)", "browse material"};
+        String [] readingResouce = {"choose how you want to get your resources from the drop down", "select from phone(pdf)", "browse material"};
         String [] sessionType = {"Personal Study", "group study"};
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(),
@@ -75,12 +76,15 @@ public class ReadingSessionSettings extends Fragment {
                     case 0:
                         //startSes.setVisibility(View.GONE);
                         //openResbtn.setVisibility(View.VISIBLE);
-                        Toast.makeText(getContext(),"it finally worked, select from phone(pdf) clicked", Toast.LENGTH_LONG).show();
-                        break;
+                        Toast.makeText(getContext(),"select your session resource", Toast.LENGTH_LONG).show();
                     case 1:
+                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.pdfdrive.com/"));
+                        startActivity(browserIntent);
+                        break;
+                    case 2:
                         openMaterial();
-                        Toast.makeText(getContext(),"it finally worked, browse material clicked", Toast.LENGTH_LONG).show();
-
+                        //Toast.makeText(getContext(),"it finally worked, browse material clicked", Toast.LENGTH_LONG).show();
+                        break;
                 }
             }
 

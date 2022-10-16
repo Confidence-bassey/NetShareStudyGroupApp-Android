@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LearningResources">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/joinClasses"
+        android:text="CLASSES"
+        android:padding="30dp"
+        android:layout_margin="16dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:onClick="classes"
+        android:background="@color/Sapphire_Blue"
+        android:gravity="center_horizontal" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Collaborate"
+        android:text="COLLABORATE"
+        android:padding="30dp"
+        android:layout_margin="16dp"
+        android:textColor="@color/white"
+        android:layout_below="@id/joinClasses"
+        android:layout_alignParentRight="true"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:onClick="Tutorials"
+        android:textSize="20sp"
+        android:background="@color/Sapphire_Blue"
+        android:gravity="center_horizontal" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/consultInstructors"
+        android:text="CONSULT INSTRUCTORS"
+        android:padding="30dp"
+        android:layout_margin="16dp"
+        android:textColor="@color/white"
+        android:layout_below="@id/Collaborate"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:onClick="consultInstructors"
+        android:background="@color/Sapphire_Blue"
+        android:gravity="center_horizontal" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/SHARERESOURCES"
+        android:text="SHARE RESOURCES OR SEARCH FOR RESOURCES"
+        android:padding="30dp"
+        android:textAlignment="center"
+        android:layout_margin="16dp"
+        android:textColor="@color/white"
+        android:layout_below="@id/consultInstructors"
+        android:layout_alignParentRight="true"
+        android:textStyle="bold"
+        android:onClick="shareResources"
+        android:textSize="20sp"
+        android:background="@color/Sapphire_Blue"
+        android:gravity="center_horizontal" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/createG_btn"
+        android:text="LEARN HOW TO CODE AND START EARNING"
+        android:padding="30dp"
+        android:textAlignment="center"
+        android:layout_margin="16dp"
+        android:textColor="@color/white"
+        android:layout_below="@id/SHARERESOURCES"
+        android:layout_alignParentRight="true"
+        android:textStyle="bold"
+        android:onClick="LearnToCode"
+        android:textSize="20sp"
+        android:background="@color/Sapphire_Blue"
+        android:gravity="center_horizontal" />
+
+</RelativeLayout>

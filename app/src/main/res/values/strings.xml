@@ -40,4 +40,14 @@
         <item>group study</item>
     </string-array>
 
+    <string-array name="addFromPhoneContact">
+        <item>select from phone contacts</item>
+        <item>social media link</item>
+    </string-array>
+
+    <string-array name="throughLink">
+        <item>Personal Study</item>
+        <item>group study</item>
+    </string-array>
+
 </resources>
