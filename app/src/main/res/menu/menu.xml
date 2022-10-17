@@ -25,6 +25,15 @@
             android:icon="@drawable/ic_person"
             android:title="View Users"/>
 
+        <item
+            android:id="@+id/GoMyCode"
+            android:icon="@drawable/chiffres1_62833079e9"
+            android:title="Consault GoMyCode"/>
+
+        <item
+            android:id="@+id/LearningResources"
+            android:icon="@drawable/chiffres1_62833079e9"
+            android:title="Learning Resources"/>
 
 
         <!-- app:showAsAction="never"
@@ -47,6 +56,11 @@
         android:id="@+id/Dashboard"
         android:icon="@drawable/ic_dashboard"
         android:title="Goto Dashboard"/>
+
+    <item
+        android:id="@+id/TakeTest"
+        android:icon="@drawable/ic_dashboard"
+        android:title="Test yourself"/>
 
     <item
         android:id="@+id/Logout"

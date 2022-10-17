@@ -31,11 +31,22 @@
     <string name="start_session">START SESSION</string>
 
     <string-array name="resMethod">
+        <item>choose how you want to get your resources from the drop down</item>
         <item>select from phone(pdf)</item>
         <item>browse material</item>
     </string-array>
 
     <string-array name="sesType">
+        <item>Personal Study</item>
+        <item>group study</item>
+    </string-array>
+
+    <string-array name="addFromPhoneContact">
+        <item>select from phone contacts</item>
+        <item>social media link</item>
+    </string-array>
+
+    <string-array name="throughLink">
         <item>Personal Study</item>
         <item>group study</item>
     </string-array>

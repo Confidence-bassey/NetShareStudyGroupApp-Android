@@ -41,40 +41,5 @@
         app:headerLayout="@layout/nav_header"
         app:menu="@menu/menu"/>
 
-    <!--
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="70dp"
-        android:layout_marginLeft="20dp"
-        android:background="@color/white"
-        >
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/testing"
-        android:text="Next"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        android:background="@color/Neon_Blue"
-        android:layout_centerInParent="true"
-        />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/GoToNotes"
-            android:text="Notes"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            android:padding="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_below="@+id/testing"
-            android:background="@color/Neon_Blue"
-            android:layout_centerInParent="true"
-            />
-    </RelativeLayout>
-    -->
 
 </androidx.drawerlayout.widget.DrawerLayout>

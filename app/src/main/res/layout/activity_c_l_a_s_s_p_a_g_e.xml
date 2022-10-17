@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CLASSPAGE">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchclassbar"
+        android:hint="Search resources"
+        android:textColor="@color/black"
+        android:textColorHint="@color/Glaucous"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:drawableLeft="@drawable/ic_search"
+        android:drawablePadding="20dp"
+        android:inputType="text"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/startclass"
+        android:text="START A CLASS"
+        android:padding="30dp"
+        android:layout_margin="16dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_below="@id/searchclassbar"
+        android:textAlignment="center"
+        android:background="@color/Sapphire_Blue"
+        android:gravity="center_horizontal" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/joinCLASS"
+        android:text="JOIN EXISTING CLASSES"
+        android:padding="30dp"
+        android:layout_margin="16dp"
+        android:textColor="@color/white"
+        android:layout_below="@id/startclass"
+        android:layout_alignParentRight="true"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:background="@color/Sapphire_Blue"
+        android:gravity="center_horizontal" />
+
+</RelativeLayout>
