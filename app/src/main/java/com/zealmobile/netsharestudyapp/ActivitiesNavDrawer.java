@@ -179,6 +179,10 @@ public class ActivitiesNavDrawer extends AppCompatActivity
                 Toast.makeText(this, "Go to dashboard", Toast.LENGTH_SHORT);
                 break;
 
+            case R.id.TakeTest:
+                Toast.makeText(this, "Test yourself", Toast.LENGTH_SHORT);
+                break;
+
             case R.id.Logout:
                 userLogOut();
                 break;

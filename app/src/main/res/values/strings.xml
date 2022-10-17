@@ -31,6 +31,7 @@
     <string name="start_session">START SESSION</string>
 
     <string-array name="resMethod">
+        <item>choose how you want to get your resources from the drop down</item>
         <item>select from phone(pdf)</item>
         <item>browse material</item>
     </string-array>
