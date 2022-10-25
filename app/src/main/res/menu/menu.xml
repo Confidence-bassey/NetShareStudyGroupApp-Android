@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.zealmobile.netsharestudyapp.MainActivity"
     tools:ShowIn="navigation_view">
 
@@ -28,11 +29,13 @@
         <item
             android:id="@+id/GoMyCode"
             android:icon="@drawable/chiffres1_62833079e9"
+            app:itemIconTint="@color/Hot_Pink"
             android:title="Consault GoMyCode"/>
 
         <item
             android:id="@+id/LearningResources"
-            android:icon="@drawable/chiffres1_62833079e9"
+            android:icon="@drawable/gzncjuuj6hntcw2ayce8"
+            app:itemIconTint="@null"
             android:title="Learning Resources"/>
 
 
