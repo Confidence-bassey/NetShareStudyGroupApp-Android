@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="100dp"
 
-        android:src="@drawable/research"/>
+        android:src="@drawable/chiffres1_62833079e9"/>
 
     <TextView
         android:layout_width="wrap_content"
