@@ -35,6 +35,11 @@ public class LearningResources extends AppCompatActivity {
         startActivity(browserIntent);
     }
 
+    public void improveBrainandMemory(View view) {
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://kwikbrain.com/student"));
+        startActivity(browserIntent);
+    }
+
     public void shareResources(View view) {
         Intent intent = new Intent(LearningResources.this, TutorialResources.class);
         startActivity(intent);
